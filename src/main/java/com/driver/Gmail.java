@@ -8,9 +8,9 @@ import java.util.Date;
 public class Gmail extends Email {
 
 
-    int inboxCapacity;
-    private ArrayList<Triple<Date,String,String>> Inbox;
-    private ArrayList<Triple<Date,String,String>> Trash;  // inbuild class in java. left,middle,right
+    private int  inboxCapacity;
+     private ArrayList<Triple<Date,String,String>> Inbox;
+    private ArrayList<Triple<Date,String,String>> Trash;  // 'inbuild' class in java. left,middle,right
     //maximum number of mails inbox can store
     //Inbox: Stores mails. Each mail has date (Date), sender (String), message (String). It is guaranteed that message is distinct for all mails.
     //Trash: Stores mails. Each mail has date (Date), sender (String), message (String)
@@ -56,7 +56,7 @@ public class Gmail extends Email {
         if(Inbox.isEmpty())
             return null;
 
-        else return Inbox.get(0).getRight();
+         return Inbox.get(Inbox.size()-1).getRight();
     }
 
 
